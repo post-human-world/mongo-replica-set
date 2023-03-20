@@ -32,7 +32,7 @@ try {
 for (let i = 0; i < 7; i++) {
     try {
         db.createUser({
-            user: 'tom-mongos',
+            user: 'tom-rs',
             pwd: 'jerry',
             roles: ["root"]
         })
