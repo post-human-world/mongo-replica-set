@@ -5,8 +5,8 @@ services:
     container_name: mongo1
     image: mongo:6.0.5
     volumes:
-      - /f/mongodb/config/:/config/
-      - /f/mongodb/rs1/:/data/
+      - ./mongodb/config/:/config/
+      - ./mongodb/data/rs1/:/data/
     networks:
       - mongors-network
     ports:
@@ -28,8 +28,8 @@ services:
     container_name: mongo2
     image: mongo:6.0.5
     volumes:
-      - /f/mongodb/config/:/config
-      - /f/mongodb/rs2/:/data
+      - ./mongodb/config/:/config
+      - ./mongodb/data/rs2/:/data
     networks:
       - mongors-network
     ports:
@@ -47,8 +47,8 @@ services:
     container_name: mongo3
     image: mongo:6.0.5
     volumes:
-      - /f/mongodb/config/:/config
-      - /f/mongodb/rs3/:/data
+      - ./mongodb/config/:/config
+      - ./mongodb/data/rs3/:/data
     networks:
       - mongors-network
     ports:

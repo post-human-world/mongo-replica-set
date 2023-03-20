@@ -1,10 +1,7 @@
 # Workflow
 
-1. modify *compose volume* mapping, it is using my window10 path
-   1. all configs and scripts are put into */xxx/mongodb/config*
-   2. keyfile is in */xxx/mongodb/config/keys/keyfile.txt*
-2. docker-compose up
-3. run */config/init.sh* in primary node
+1. docker-compose up
+2. run */config/init.sh* in primary node
 
 # Reference
 
