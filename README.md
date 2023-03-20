@@ -1,7 +1,8 @@
 # Workflow
 
 1. docker-compose up
-2. run */config/init.sh* in primary node
+2. run `/config/init.sh` in mongo1 terminal
+3. Access mongodb with url: `mongodb://tom-rs:jerry@localhost:27021/?directConnection=true&authMechanism=DEFAULT`
 
 # Reference
 
