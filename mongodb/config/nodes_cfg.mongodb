@@ -24,8 +24,28 @@ var config = {
 
 try {
     rs.initiate(config, { force: true })
+    print('initiate successfully')
 } catch(e) {
     print('already initiated')
 }
 
-rs.status()
+for (let i = 0; i < 7; i++) {
+    try {
+        db.createUser({
+            user: 'tom-mongos',
+            pwd: 'jerry',
+            roles: ["root"]
+        })
+        print('Create user successfully')
+        break
+    } catch (e) {
+        if (e.codeName == 'NotWritablePrimary') {
+            print('Create user failed, because this node does not become primary. Retrying.......')
+            sleep(3 * 1000)
+            continue
+        }
+        print(JSON.stringify(e))
+        print('Create user failed, do it manually')
+        break
+    }
+}
