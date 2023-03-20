@@ -8,6 +8,6 @@ db.createUser({
 })
 db.auth('tom', 'jerry')
 
-if (db.getUsers().users.length == 1) {
+if (db.getUsers().users.length != 1) {
     print('WARNING: expected only one user, but there are more than one')
 }
